@@ -1,0 +1,52 @@
+.cleared {
+  clear: both;
+}
+
+.ellipsis {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.pull-right {
+  float: right;
+}
+
+.loading:after {
+  height: 4rem;
+  width: 4rem;
+  border-width: .5rem;
+  border-radius: 100rem;
+  left: -30px;
+}
+
+@mixin on-mobile-sm {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin on-mobile {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin on-tablet-wide {
+  @media only screen and (max-width: 940px) {
+    @content;
+  }
+}
+
+@mixin on-desktop-sm {
+  @media only screen and (max-width: 1340px) {
+    @content;
+  }
+}

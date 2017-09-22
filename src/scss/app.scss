@@ -1,0 +1,49 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'base.scss';
+@import 'layout.scss';
+
+/* Notify */
+.notify {
+    display: none;
+    position: fixed;
+    z-index: 1080;
+    height: 35px;
+    top: 0;
+    width: 460px;
+    left: 50%;
+    margin-left: -230px;
+    bottom: 0;
+    color: #444;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+
+    @include on-mobile {
+        width: 320px;
+        margin-left: -160px;
+    }
+}
+
+.notify-info, .notify-error {
+    padding: 4px 16px;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .7);
+    color: #fff;
+}
+
+.notify-info {
+    background: #FCA744;
+}
+
+.notify-error {
+    background: darken(#b71c1c, 10%);
+}
+
+
+.load-more {
+  padding-top: 15px;
+  margin-bottom: 15px;
+}

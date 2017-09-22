@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $base-color;
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+}

@@ -1,0 +1,105 @@
+@import '../scss/mixins.scss';
+
+a {
+  color: #b71c1c;
+}
+
+.user {
+  float: left;
+  padding: 8px;
+  position: relative;
+
+  @include on-mobile {
+    padding: 6px;
+  }
+
+  .avatar {
+    height: 90px;
+    width: 90px;
+    border-radius: 90px;
+    background-size: 100%;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.6);
+    transition: all .3s ease-in-out;
+    opacity: .6;
+
+    @include on-mobile {
+      height: 70px;
+      width: 70px;
+    }
+
+    @include on-mobile-sm {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  &.active .avatar {
+    opacity: 1;
+    border: 5px solid #fff;
+    animation:pulse 2s infinite alternate;
+    @keyframes pulse {
+      from { border-color: #1a1a1a; }
+      to { border-color: #fff; }
+    }
+  }
+
+  .info {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 220px;
+    padding: 8px;
+    background: rgba(0,0,0,.85);
+    z-index: 10;
+    border-radius: 100px;
+    cursor: pointer;
+
+    .avatar {
+      opacity: 1;
+    }
+
+    .detail {
+      float: right;
+      width: 112px;
+      padding: 10px 15px;
+    }
+
+    @include on-mobile {
+      width: 200px;
+
+      .detail {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    }
+
+    @include on-mobile-sm {
+      font-size: 13px;
+
+      .detail {
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+    }
+  }
+
+  &.right {
+    .info {
+      right: 0;
+      left: auto;
+      .avatar {
+        float: right;
+      }
+      .detail {
+        float: left;
+      }
+    }
+  }
+
+  &:hover {
+    .info {
+      display: block;
+    }
+  }
+}
